@@ -21,6 +21,16 @@ public class MybatisController {
     }
 
     @RequestMapping("/addOder")
+
+    /**
+     *
+     * 功能描述: 新增订单
+     *
+     * @param: number 需要新增的订单号
+     * @return: java.lang.String
+     * @auther: xiaojianma
+     * @date: 2020/11/2 22:16
+     */
     public String addOrder(String number) {
         return orderService.addOrder(number) > 0 ? "success" : "fail";
     }
