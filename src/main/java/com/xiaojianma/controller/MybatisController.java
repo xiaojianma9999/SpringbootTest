@@ -3,6 +3,7 @@ package com.xiaojianma.controller;
 import com.xiaojianma.member.service.MemberService;
 import com.xiaojianma.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +15,9 @@ public class MybatisController {
 
     @Autowired
     OrderService orderService;
+
+    @Value("${xiaojianma.userName}")
+    private String userName;
 
     @RequestMapping("/addUser")
     public String addUser(String name, Integer age) {
@@ -33,5 +37,10 @@ public class MybatisController {
      */
     public String addOrder(String number) {
         return orderService.addOrder(number) > 0 ? "success" : "fail";
+    }
+
+    @RequestMapping("/getUserName")
+    public String getUserName() {
+        return userName;
     }
 }

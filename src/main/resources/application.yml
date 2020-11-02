@@ -26,3 +26,5 @@ spring:
       maxPoolSize: 25
       minPoolSize: 3
       uniqueResourceName: orderDatasource
+xiaojianma:
+  userName: 小健马课堂
