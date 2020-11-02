@@ -6,7 +6,11 @@
 
     <groupId>com.xiaojianma</groupId>
     <artifactId>springboot-mybatis</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>xml-cfg</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -18,8 +22,16 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.8.RELEASE</version>
     </parent>
-
+    <!--
+    starter其实就是springboot快速整合第三方框架依赖
+    比如：
+    spring-boot-starter-web springmvc
+    spring-boot-starter-freemarker freemarker
+    spring-boot-starter-redis redis
+    spring-boot-starter-amqp amqp
+    -->
     <dependencies>
+        <!--springboot整合springmvc-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
